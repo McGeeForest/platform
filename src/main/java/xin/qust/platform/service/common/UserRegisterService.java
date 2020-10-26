@@ -52,6 +52,7 @@ public class UserRegisterService {
             all.setAuthority("ALL");
             all.setAuthorityName("所有权限");
             userAuthorityRepo.save(all);
+            
 
             UserAuthority reader = new UserAuthority();
             reader.setAuthority("READ_ONLY");
@@ -88,7 +89,7 @@ public class UserRegisterService {
             adminRoles.add(userRole);
 
             userBasicInfo.setUserRoles(adminRoles);
-
+//            System.out.println(userBasicInfo);
             userBasicInfoRepo.save(userBasicInfo);
 
             if (userBasicInfo.getEmail() != null && !userBasicInfo.getEmail().equals("")) {

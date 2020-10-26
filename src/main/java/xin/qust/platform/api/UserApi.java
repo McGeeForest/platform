@@ -34,6 +34,7 @@ public class UserApi {
 
     @RequestMapping("register")
     public void register () {
+        logger.info("新建用户");
         userRegisterService.addNewUser();
     }
 
